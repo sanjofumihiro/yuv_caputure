@@ -1,3 +1,4 @@
+import time
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -14,7 +15,7 @@ while True:
     plt.hist(YUV_channel[2].ravel(),256,[0,256])
     plt.pause(0.01)
     
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(100)
     if (key == ord('q')):
         break
 cap.release()
